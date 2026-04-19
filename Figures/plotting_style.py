@@ -1,7 +1,7 @@
 import seaborn as sns
 import matplotlib as plt
 import numpy as np
-import tkinter as tk
+# import tkinter as tk
 
 def figure_style():
     """
@@ -32,8 +32,8 @@ def figure_style():
                 'legend.frameon': False,
                  })
     
-    plt.rcParams['pdf.fonttype'] = 42
-    plt.rcParams['ps.fonttype'] = 42
+    # plt.rcParams['pdf.fonttype'] = 42
+    # plt.rcParams['ps.fonttype'] = 42
 
     # choose colors
     colors = {
@@ -46,7 +46,6 @@ def figure_style():
             }
 
     sns.despine(trim=True)
-    screen_width = tk.Tk().winfo_screenwidth()
-    dpi = screen_width / 10
+    dpi = 300
 
     return colors, dpi
