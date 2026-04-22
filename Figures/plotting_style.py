@@ -9,10 +9,10 @@ def figure_style():
     """
     sns.set_theme(style="ticks", context="paper",
             font="Arial",
-            rc={"font.size": 11,
-                "figure.titlesize": 11,
-                "axes.titlesize": 11,
-                "axes.labelsize": 11,
+            rc={"font.size": 8,
+                "figure.titlesize": 9,
+                "axes.titlesize": 9,
+                "axes.labelsize": 8,
                 "axes.linewidth": 0.5,
                 "lines.linewidth": 1,
                 "lines.markersize": 3,
@@ -27,13 +27,37 @@ def figure_style():
                 "ytick.minor.size": 2,
                 "xtick.minor.width": 0.5,
                 "ytick.minor.width": 0.5,
-                'legend.fontsize': 10,
-                'legend.title_fontsize': 10,
+                'legend.fontsize': 8,
+                'legend.title_fontsize': 8,
                 'legend.frameon': False,
                  })
     
-    # plt.rcParams['pdf.fonttype'] = 42
-    # plt.rcParams['ps.fonttype'] = 42
+    plt.rcParams.update({
+                'font.family': 'sans-serif',       # Use sans-serif fonts
+                'font.sans-serif': ['Arial'],      # Prefer Arial
+                "font.size": 8,
+                "figure.titlesize": 9,
+                "axes.titlesize": 9,
+                "axes.labelsize": 8,
+                "axes.linewidth": 0.5,
+                "lines.linewidth": 1,
+                "lines.markersize": 3,
+                "xtick.labelsize": 8,
+                "ytick.labelsize": 8,
+                "savefig.transparent": True,
+                "xtick.major.size": 2.5,
+                "ytick.major.size": 2.5,
+                "xtick.major.width": 0.5,
+                "ytick.major.width": 0.5,
+                "xtick.minor.size": 2,
+                "ytick.minor.size": 2,
+                "xtick.minor.width": 0.5,
+                "ytick.minor.width": 0.5,
+                'legend.fontsize': 8,
+                'legend.title_fontsize': 8,
+                'legend.frameon': False,
+                 })
+
 
     # choose colors
     colors = {
@@ -45,7 +69,7 @@ def figure_style():
                 'snn_inh': sns.color_palette('colorblind')[1],
             }
 
-    sns.despine(trim=True)
+    # sns.despine(trim=True)
     dpi = 300
 
     return colors, dpi
